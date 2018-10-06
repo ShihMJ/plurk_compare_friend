@@ -1,0 +1,2 @@
+# plurk_compare_friend
+透過作存檔點的方式來追蹤被誰刪了噗浪好友

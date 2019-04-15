@@ -77,7 +77,10 @@ class GUI(Frame):
                 self.deleted_friend = self.CL.deleted_friend
                 if self.deleted_friend != []:
                     for friend in self.deleted_friend :
-                        self.outputField.insert(tkinter.END, str(friend))
+                        # check if there is emoji (or char not in range U+0000-U+FFFF)
+                        friend_string = [friend[i] for i in range(len(friend)) if ord(friend[i]) in range(65536)]
+                        friend_string = ''.join(friend_string)
+                        self.outputField.insert(tkinter.END, str(friend_string))
                         self.outputField.insert(tkinter.END, "\n")
                 else :
                     self.outputField.insert(1.0, "沒有被刪除的好友")
@@ -89,7 +92,7 @@ if __name__ == '__main__':
     root.columnconfigure(1, weight = 1)
     root.rowconfigure(1, weight = 1)
     root.geometry("400x100")
-    root.winfo_toplevel().title("噗浪邊緣人2.0")
+    root.winfo_toplevel().title("噗浪邊緣人2.1")
 
     icon = Icon().icon
     icondata= base64.b64decode(icon)

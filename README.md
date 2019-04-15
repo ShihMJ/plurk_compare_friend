@@ -1,5 +1,5 @@
 # plurk_compare_friend
-https://drive.google.com/open?id=1MwoYS8x5hXu8f5EYG4i0B9CkbV11XnQl
+https://drive.google.com/open?id=1bLieVlp8_z3iQrIOo9RpmSWV2SagzVX5
 
 GUI開發模組為tkinter，用pyinstaller打包成exe
 
@@ -9,6 +9,10 @@ GUI開發模組為tkinter，用pyinstaller打包成exe
 2. 哪天發現好像被刪好友了按「選擇檔案」，選擇之前作過的txt檔
 3. 輸入帳號後按好友比較，output欄即是被刪掉的好友QQ
 4. 如果你很變態也可以偷偷觀察別人的好友>_<
+-----------------
+2.1更新
+1. 修正了emoji會造成程式判斷不完全的問題
+
 -----------------
 2.0更新
 1. 現在會顯示好友的暱稱了，作成的txt檔裡面也會存好友的暱稱
